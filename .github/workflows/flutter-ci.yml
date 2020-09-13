@@ -50,7 +50,15 @@ jobs:
         path: build/app/outputs/flutter-apk/app-debug.apk
 
     # Build apk.
+    - run: echo $SIGNING_KEY | base64 -d > android/app/key.jks
+      env:
+        SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
     - run: flutter build apk
+      env:
+        KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        KEY_PATH: key.jks
     # Upload generated apk to the artifacts.
     - uses: actions/upload-artifact@v1
       with:
