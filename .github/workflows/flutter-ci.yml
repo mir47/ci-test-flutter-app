@@ -20,16 +20,9 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - run: ls android/app
     - run: echo $SIGNING_KEY | base64 -d > android/app/key.jks
       env:
         SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
-        KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
-        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-        KEY_PATH: key.jks
-
-    - run: ls android/app
 
     # Setup the flutter environment - include the flutter action
     - uses: subosito/flutter-action@v1
@@ -53,6 +46,11 @@ jobs:
 
     # Build apk. (debug)
     - run: flutter build apk --debug
+    env:
+      KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+      KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+      KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+      KEY_PATH: key.jks
     # Upload generated apk to the artifacts. (debug)
     - uses: actions/upload-artifact@v1
       with:
