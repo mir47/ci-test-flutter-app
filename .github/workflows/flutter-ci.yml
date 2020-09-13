@@ -46,11 +46,11 @@ jobs:
 
     # Build apk. (debug)
     - run: flutter build apk --debug
-    env:
-      KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
-      KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-      KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-      KEY_PATH: key.jks
+      env:
+        KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        KEY_PATH: key.jks
     # Upload generated apk to the artifacts. (debug)
     - uses: actions/upload-artifact@v1
       with:
