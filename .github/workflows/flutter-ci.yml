@@ -41,6 +41,10 @@ jobs:
     - name: Run tests
       run: flutter test
 
+    - run: echo $SIGNING_KEY | base64 -d > android/app/key.jks
+      env:
+        SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+
     # Build apk. (debug)
     - run: flutter build apk --debug
     # Upload generated apk to the artifacts. (debug)
@@ -50,9 +54,6 @@ jobs:
         path: build/app/outputs/flutter-apk/app-debug.apk
 
     # Build apk.
-    - run: echo $SIGNING_KEY | base64 -d > android/app/key.jks
-      env:
-        SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
     - run: flutter build apk
       env:
         KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
