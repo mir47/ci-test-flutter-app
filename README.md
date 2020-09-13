@@ -29,3 +29,13 @@ To build iOS debug, run:
 ```
 flutter build ios --debug --no-codesign
 ```
+
+## Android Build
+
+Create new file: `\[project\]/android/key.properties`, with content:
+```
+storePassword=[storePassword]
+keyPassword=[keyPassword]
+keyAlias=key
+storeFile=C:/Users/User-Pc/key.jks
+```
