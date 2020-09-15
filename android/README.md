@@ -14,6 +14,7 @@ Replace {USER_NAME} with your user name.
 This will store the key.jks file in the user home directory.
 
 > :warning: **Keep the keystore file private:** Don’t check it into public source control!
+> :warning: **The same keystore must be used for uploading app updates:** Make a backup of the keystore file e.g. email it to yourself
 
 ### Reference the keystore from the app
 Create a file named `<app dir>/android/key.properties` that contains a reference to your keystore:
