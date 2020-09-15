@@ -109,7 +109,6 @@ jobs:
 
       # Download generated aab from the artifacts.
       - name: Download bundle from artifacts
-        working-directory: ./android
         uses: actions/download-artifact@v1
         with:
           name: release-aab
