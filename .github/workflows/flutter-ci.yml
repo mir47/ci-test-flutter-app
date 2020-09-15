@@ -113,9 +113,9 @@ jobs:
         with:
           name: release-aab
 
-      - run: ls /
+      - run: ls
       - run: ls android/
-      - run: ls android/build/app/outputs/bundle/release/
+      - run: ls build/app/outputs/bundle/release/
 
       # Upload to Play Store
       - name: Upload to Play Store
