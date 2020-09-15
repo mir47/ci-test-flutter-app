@@ -1,2 +1,2 @@
-json_key_file("") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
-package_name("com.example.my_flutter_app") # e.g. com.krausefx.app
+json_key_file("api.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one. Treat the .json file like your password and do not check it into any public source control repositories.
+package_name("com.jmnapps.flutterexample") # e.g. com.krausefx.app
