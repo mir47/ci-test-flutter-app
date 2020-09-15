@@ -24,6 +24,7 @@ jobs:
       with:
         ruby-version: '2.7'
     - name: setup fastlane
+      working-directory: ./android
       run: bundle install
     - run: echo $SIGNING_KEY | base64 -d > android/app/key.jks
       env:
