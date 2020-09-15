@@ -109,13 +109,13 @@ jobs:
 
       # Download generated aab from the artifacts.
       - name: Download bundle from artifacts
+        working-directory: ./android
         uses: actions/download-artifact@v1
         with:
           name: release-aab
 
       - run: ls
       - run: ls android/
-      - run: ls build/app/outputs/bundle/release/
 
       # Upload to Play Store
       - name: Upload to Play Store
