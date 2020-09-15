@@ -100,7 +100,7 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.7'
-      - name: setup fastlane
+      - name: Setup fastlane
         working-directory: ./android
         run: bundle install
       - run: echo $SERVICE_ACCOUNT_JSON > android/api.json
@@ -112,6 +112,10 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: release-aab
+
+      - run: ls /
+      - run: ls android/
+      - run: ls android/build/app/outputs/bundle/release/
 
       # Upload to Play Store
       - name: Upload to Play Store
