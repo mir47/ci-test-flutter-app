@@ -33,3 +33,9 @@ Run
 ```
 flutter build apk
 ```
+
+## Fastlane Android
+To be able to upload to Play Store from local machine, change `<app dir>/android/fastlane/Appfile` to point to your local JSON file, example:
+```
+json_key_file("C:/Users/User-Pc/android-keys/api.json")
+```
