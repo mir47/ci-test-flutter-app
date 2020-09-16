@@ -115,8 +115,8 @@ jobs:
           name: release-aab
 
       - run: ls
-      - run: ls release-aab
       - run: ls android/
+      - run: ls android/release-aab/
 
       # Upload to Play Store
       - name: Upload to Play Store
