@@ -103,9 +103,9 @@ jobs:
       - name: Setup fastlane
         working-directory: ./android
         run: bundle install
-      - run: echo $SERVICE_ACCOUNT_JSON > android/api.json
+      - run: echo $GOOGLE_SERVICE_ACCOUNT_JSON_BASE_64 | base64 -d > android/api.json
         env:
-          SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          GOOGLE_SERVICE_ACCOUNT_JSON_BASE_64: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON_BASE_64 }}
 
       # Download generated aab from the artifacts.
       - name: Download bundle from artifacts
