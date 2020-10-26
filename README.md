@@ -32,5 +32,7 @@ flutter build ios --debug --no-codesign
 
 ## Automated Publishing
 https://flutter.dev/docs/deployment/cd
+
 https://medium.com/@AndreSand/automate-publishing-app-bundle-or-apk-to-google-play-store-8641f0ba2f64
+
 https://medium.com/@niraj_prajapati/automate-android-app-publishing-on-play-store-using-github-actions-554de7801c36
