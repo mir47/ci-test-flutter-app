@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:package_info/package_info.dart';
 
 import 'cart.dart';
 import 'dish_object.dart';
@@ -26,6 +27,8 @@ class MyHomePage1 extends StatefulWidget {
 }
 
 class _MyHomePage1State extends State<MyHomePage1> {
+  String version;
+
   List<Dish> _dishes = List<Dish>();
 
   List<Dish> _cartList = List<Dish>();
@@ -40,7 +43,7 @@ class _MyHomePage1State extends State<MyHomePage1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(version),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.only(right: 16.0, top: 8.0),
@@ -84,6 +87,14 @@ class _MyHomePage1State extends State<MyHomePage1> {
       ),
       body: _buildGridView(),
     );
+  }
+
+  void getVersion() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    String appName = packageInfo.appName;
+    String packageName = packageInfo.packageName;
+    version = packageInfo.version;
+    String buildNumber = packageInfo.buildNumber;
   }
 
 //  ListView _buildListView() {
