@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mailer/mailer.dart';
-import 'package:mailer/smtp_server/gmail.dart';
+// import 'package:mailer/mailer.dart';
+// import 'package:mailer/smtp_server/gmail.dart';
 import 'dish_object.dart';
 
 class Cart extends StatefulWidget {
@@ -70,30 +70,30 @@ class _CartState extends State<Cart> {
 }
 
 email() async {
-  String username = "candotest123@gmail.com";
-  String password = "123candotest321";
+  // String username = "candotest123@gmail.com";
+  // String password = "123candotest321";
 
-  final smtpServer = gmail(username, password);
+  // final smtpServer = gmail(username, password);
   // Creating the Gmail server
 
   // Create our email message.
-  final message = Message()
-    ..from = Address(username)
-    ..recipients.add('miroslav@luno.com') //recipent email
+  // final message = Message()
+  // ..from = Address(username)
+  // ..recipients.add('miroslav@luno.com') //recipent email
 //    ..ccRecipients.addAll(['destCc1@example.com', 'destCc2@example.com']) //cc Recipents emails
 //    ..bccRecipients.add(Address('bccAddress@example.com')) //bcc Recipents emails
-    ..subject =
-        'Test Dart Mailer library :: 😀 :: ${DateTime.now()}' //subject of the email
-    ..text =
-        'This is the plain text.\nThis is line 2 of the text part.'; //body of the email
+//     ..subject =
+//         'Test Dart Mailer library :: 😀 :: ${DateTime.now()}' //subject of the email
+//     ..text =
+//         'This is the plain text.\nThis is line 2 of the text part.'; //body of the email
 
-  try {
-    final sendReport = await send(message, smtpServer);
-    print(
-        'Message sent: ' + sendReport.toString()); //print if the email is sent
-  } on MailerException catch (e) {
-    print(
-        'Message not sent. \n' + e.toString()); //print if the email is not sent
-    // e.toString() will show why the email is not sending
-  }
+  // try {
+  //   final sendReport = await send(message, smtpServer);
+  //   print(
+  //       'Message sent: ' + sendReport.toString()); //print if the email is sent
+  // } on MailerException catch (e) {
+  //   print(
+  //       'Message not sent. \n' + e.toString()); //print if the email is not sent
+  //   // e.toString() will show why the email is not sending
+  // }
 }

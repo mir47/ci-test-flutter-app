@@ -27,9 +27,9 @@ class MyHomePage1 extends StatefulWidget {
 }
 
 class _MyHomePage1State extends State<MyHomePage1> {
-  List<Dish> _dishes = List<Dish>();
+  List<Dish> _dishes = <Dish>[];
 
-  List<Dish> _cartList = List<Dish>();
+  List<Dish> _cartList = <Dish>[];
 
   @override
   void initState() {
