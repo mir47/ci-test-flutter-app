@@ -9,7 +9,6 @@ class About extends StatefulWidget {
 }
 
 class _AboutState extends State<About> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +18,6 @@ class _AboutState extends State<About> {
         body: _buildListView(),
         resizeToAvoidBottomInset: false);
   }
-
 
   Future<String> getVersionNumber() async {
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
@@ -57,9 +55,9 @@ class _AboutState extends State<About> {
             future: getVersionNumber(),
             builder: (BuildContext context, AsyncSnapshot<String> snapshot) =>
                 Text(
-                  snapshot.hasData ? snapshot.data : "Loading ...",
-                  style: TextStyle(color: Colors.black38),
-                ),
+              snapshot.hasData ? snapshot.data : "Loading ...",
+              style: TextStyle(color: Colors.black38),
+            ),
           ),
         ),
         // ...
