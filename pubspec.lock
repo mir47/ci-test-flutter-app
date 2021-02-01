@@ -80,7 +80,7 @@ packages:
       name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.16.1"
+    version: "0.15.8"
   logging:
     dependency: transitive
     description:
@@ -94,7 +94,7 @@ packages:
       name: mailer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.4"
+    version: "3.2.1"
   matcher:
     dependency: transitive
     description:

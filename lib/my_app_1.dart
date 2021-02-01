@@ -197,94 +197,69 @@ class _MyHomePage1State extends State<MyHomePage1> {
   void _populateDishes() {
     var list = <Dish>[
       Dish(
-        name: 'Chicken Zinger',
+        name: 'Chicken burger',
         icon: Icons.fastfood,
         color: Colors.amber,
       ),
       Dish(
-        name: 'Chicken Zinger without chicken',
-        icon: Icons.print,
+        name: 'Pizza',
+        icon: Icons.local_pizza,
         color: Colors.deepOrange,
       ),
       Dish(
         name: 'Rice',
-        icon: Icons.child_care,
+        icon: Icons.local_dining,
         color: Colors.brown,
       ),
       Dish(
-        name: 'Beef burger without beef',
+        name: 'Beef burger',
         icon: Icons.whatshot,
         color: Colors.green,
       ),
       Dish(
-        name: 'Laptop without OS',
-        icon: Icons.laptop,
+        name: 'Pasta',
+        icon: Icons.category,
         color: Colors.purple,
       ),
       Dish(
-        name: 'Mac wihout macOS',
-        icon: Icons.laptop_mac,
+        name: 'Chicken',
+        icon: Icons.category,
         color: Colors.blueGrey,
       ),
       Dish(
-        name: 'Chicken Zinger',
+        name: 'Drink',
         icon: Icons.fastfood,
         color: Colors.amber,
       ),
       Dish(
-        name: 'Chicken Zinger without chicken',
-        icon: Icons.print,
+        name: 'Pepperoni',
+        icon: Icons.local_pizza,
         color: Colors.deepOrange,
       ),
       Dish(
-        name: 'Rice',
-        icon: Icons.child_care,
+        name: 'Sushi',
+        icon: Icons.local_dining,
         color: Colors.brown,
       ),
       Dish(
-        name: 'Beef burger without beef',
+        name: 'Veg burger',
         icon: Icons.whatshot,
         color: Colors.green,
       ),
       Dish(
-        name: 'Laptop without OS',
-        icon: Icons.laptop,
+        name: 'Chips',
+        icon: Icons.category,
         color: Colors.purple,
       ),
       Dish(
-        name: 'Mac wihout macOS',
-        icon: Icons.laptop_mac,
+        name: 'Hotdog',
+        icon: Icons.category,
         color: Colors.blueGrey,
       ),
       Dish(
-        name: 'Chicken Zinger',
+        name: 'Sandwich',
         icon: Icons.fastfood,
         color: Colors.amber,
-      ),
-      Dish(
-        name: 'Chicken Zinger without chicken',
-        icon: Icons.print,
-        color: Colors.deepOrange,
-      ),
-      Dish(
-        name: 'Rice',
-        icon: Icons.child_care,
-        color: Colors.brown,
-      ),
-      Dish(
-        name: 'Beef burger without beef',
-        icon: Icons.whatshot,
-        color: Colors.green,
-      ),
-      Dish(
-        name: 'Laptop without OS',
-        icon: Icons.laptop,
-        color: Colors.purple,
-      ),
-      Dish(
-        name: 'Mac wihout macOS',
-        icon: Icons.laptop_mac,
-        color: Colors.blueGrey,
       ),
     ];
 
