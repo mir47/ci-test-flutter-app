@@ -55,14 +55,15 @@ class _CartState extends State<Cart> {
                   );
                 }),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               email();
             },
             child: const Text('Confirm', style: TextStyle(fontSize: 20)),
-            color: Colors.blue,
-            textColor: Colors.white,
-            elevation: 5,
+            // TODO: fix changed properties (ElevatedButton used to be RaisedButton).
+            // color: Colors.blue,
+            // textColor: Colors.white,
+            // elevation: 5,
           )
         ]),
         resizeToAvoidBottomInset: false);
