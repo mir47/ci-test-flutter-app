@@ -14,6 +14,7 @@ Replace {USER_NAME} with your user name.
 This will store the key.jks file in the user home directory.
 
 > :warning: **Keep the keystore file private:** Don’t check it into public source control!
+
 > :warning: **The same keystore must be used for uploading app updates:** Make a backup of the keystore file e.g. email it to yourself
 
 ### Reference the keystore from the app
@@ -39,3 +40,6 @@ To be able to upload to Play Store from local machine, change `<app dir>/android
 ```
 json_key_file("C:/Users/User-Pc/android-keys/api.json")
 ```
+
+## Backups
+> :warning: **Don’t share publicly or check into public source control!** [Link to drive folder](https://drive.google.com/drive/u/0/folders/1wqayRerD8HAW7kckW_rDGeU6locX6QZR)
